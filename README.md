@@ -1,4 +1,4 @@
-# Instagram-Bot
+## Instagram Message Bot
 
     from instabot import Bot
     bot = Bot()
