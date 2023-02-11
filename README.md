@@ -20,7 +20,7 @@
 
 ---------------------------
 
-- Paste `https://scontent-ams4-1.cdninstagram.com/o1/v/t16/f1/m82/` in top right search box `to download video`
+- Paste `-1.cdninstagram.com/o1/v/t16/f1/m82/` in top right search box `to download video`
 
 ### To download video, copy this part.
 ![image](https://user-images.githubusercontent.com/50515418/218238477-c90a658d-c3b4-4e90-8025-b39381f4e6b9.png)
