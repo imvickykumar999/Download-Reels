@@ -25,7 +25,7 @@
 ### To download video, copy this part.
 ![image](https://user-images.githubusercontent.com/50515418/218238477-c90a658d-c3b4-4e90-8025-b39381f4e6b9.png)
 
-- Paste in new tab to open video.
+- Paste in new tab to open video link.
 - Press 3 dots on botton right and press download.
 
 ------------------------
@@ -35,7 +35,7 @@
 ### To download audio, copy this part.
 ![image](https://user-images.githubusercontent.com/50515418/218238598-4b501eb8-5242-496f-bd3d-c208a7d8f86a.png)
 
-- Paste in new tab to open video.
+- Paste in new tab to open audio link.
 - Press 3 dots on right and press download.
 
 ------------------------------
