@@ -27,29 +27,27 @@ def reel_audio():
     a = re.search(r'\b(progressive_download_url)\b', dev_json)
     start_index = a.start()
     start_index = start_index + 3 + len('progressive_download_url')
+    dev_json[start_index:]
 
-    b = re.search(r'\b(duration_in_ms)\b', dev_json)
-    end_index = b.start()
-    end_index = end_index - 3
-
-    audio_link = dev_json[start_index : end_index]
-    print(audio_link)
-    
-def reel_video():
-    a = re.search(r'\b(-1.cdninstagram.com/o1/v/t16/f1/m82/)\b', dev_json)
-    check_index = a.start()
-    start_index = check_index - 21
-
-    b = re.search(r'\b(-1.cdninstagram.com/o1/v/t16/f1/m82/)\b', dev_json[check_index:])
-    end_index = b.start()
-    end_index = end_index - 72
+    b = re.search(r'\b(",")\b', dev_json[start_index + 1:])
+    end_index = b.start() + 1
     end_index += start_index
 
     audio_link = dev_json[start_index : end_index]
-    print(audio_link)
+    print('Audio Link : ', audio_link)
+    
+def reel_video():
+    a = re.search(r'\b(o1/v/t16/f1/m82)\b', dev_json)
+    check_index = a.start()
+    start_index = check_index - 40
 
-import os
-os.system('cls')
+    b = re.search(r'\b(o1/v/t16/f1/m82)\b', dev_json[check_index+1:])
+    end_index = b.start()
+    end_index = end_index - 70
+    end_index += start_index
+
+    video_link = dev_json[start_index : end_index]
+    print('Video Link : ', video_link)
 
 reel_audio()
 print()
