@@ -12,15 +12,15 @@
 - Copy reel `Link`.
 - for example : `https://www.instagram.com/reel/CmOhE_YtI-I/?utm_source=ig_web_copy_link`
 
-- Paste `?&__a=1&__d=dis` in end of link.
-- for example : `https://www.instagram.com/reel/CmOhE_YtI-I/?utm_source=ig_web_copy_link?&__a=1&__d=dis`
+- Paste `?&__a=1&__d=1` in end of link. ( Note : `__` underscore `_` is 2 times.)
+- for example : `https://www.instagram.com/reel/CmOhE_YtI-I/?utm_source=ig_web_copy_link?&__a=1&__d=1`
 
 - Open complete link in browser and Press enter.
-- Press `Ctrl+F`
+- Press `Ctrl+F` to search text.
 
 ---------------------------
 
-- Paste `o1/v/t16/f1/m82` in top right search box `to download video`
+- Paste `o1/v/t16/f1/m82` in top right search box `to download Video`
 
 ### To download video, copy this part.
 ![image](https://user-images.githubusercontent.com/50515418/218238477-c90a658d-c3b4-4e90-8025-b39381f4e6b9.png)
@@ -30,7 +30,7 @@
 
 ------------------------
 
-- Paste `progressive_download_url` in top right search box `to download audio`
+- Paste `progressive_download_url` in top right search box `to download Audio`
 
 ### To download audio, copy this part.
 ![image](https://user-images.githubusercontent.com/50515418/218238598-4b501eb8-5242-496f-bd3d-c208a7d8f86a.png)
