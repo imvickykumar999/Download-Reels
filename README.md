@@ -34,11 +34,15 @@
 
 - [`Download`](https://github.com/imvickykumar999/Download-Reels/tree/main/Reels%20Downloader%20in%20Flask) *and* `Run @` http://127.0.0.1:5000/
 
-> [![image](https://user-images.githubusercontent.com/50515418/226088722-5858ca21-fba8-4996-a74b-018def6cda9c.png)](https://www.instagram.com/vix.bot/)
+> [![image](https://user-images.githubusercontent.com/50515418/226117492-c0696393-80bb-4e59-bbe4-3ddadc64d073.png)](https://www.instagram.com/vix.bot/)
 
 -----------------
 
 ## >>> `Download Reels` *by* `Reel ID`
+
+**for example,** `ClwrpW1BB-R` *is Reel ID in* `https://www.instagram.com/p/ClwrpW1BB-R/`
+
+<br>
 
 - Click on `3 dots` on reel.
 
