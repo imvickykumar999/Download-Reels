@@ -19,7 +19,7 @@
 						<h1>Home</h1>
 					</a>
 				</div>
-			<hr>
+			<hr> <br>
 					
 		{% if data == {} or itis == 'user' %}
 			<a target='__blank' href="https://www.instagram.com/{{username.lower()}}/">
@@ -45,11 +45,9 @@
 												</a>
 											</td>
 
-										{% else %}
-											<td> {{ x }} </td>
+											<td> {{ y }} </td>
 										{% endif %}
 
-										<td> {{ y }} </td>
 									</tr>
 								{% endfor %}
 
@@ -111,7 +109,7 @@
 					<th>Either Copy Link from Browser (see below ss)</th>
 					<th>Or Copy Link from Mobile App (see below ss)</th>
 				</tr>
-				
+
 				<tr>
 					<td><img src="https://user-images.githubusercontent.com/50515418/218237891-2159d910-6a8e-4abe-991e-0ad1c00e1efb.png" alt="3" width = 400px></td>
 					<td><img src="https://user-images.githubusercontent.com/50515418/218239639-5dc9242c-e4ea-48bd-8b05-f50113e9ad96.png" alt="4" width = 400px></td>
@@ -119,7 +117,7 @@
 
 				<tr>
 					<th>Try either Reel URL or ReelID e.g., ClwrpW1BB-R</th>
-					<th>Try either Profile URL or UserID e.g., vix.bot</th>
+					<th>Try either Profile URL or Username e.g., vix.bot</th>
 				</tr>
 			</table>
 

@@ -18,7 +18,7 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
 
 def getfollowedby(url = 'vix.bot'):
     """View Instagram user follower count"""
-    link = f'https://www.instagram.com/{url}/?__a=1&__d=1'
+    link = f'https://www.instagram.com/{url}/?__a=1&__d=dis'
     user = requests.get(link)
 
     a = user.json()
@@ -40,7 +40,7 @@ def getname(url):
         if len(url) == 11 and url[0] == 'C':
             itis = 'reels'
     else:
-        if url[3] == 'reel' or url[3] == 'p':
+        if url[3] == 'reels' or url[3] == 'reel' or url[3] == 'p':
             url = url[4]
             itis = 'reels'
         else:
@@ -53,11 +53,15 @@ def getname(url):
 def home():
     if request.method == 'POST':
         username = getname(request.form['username'])
-        
+        # print(username)
+
         if username[1] == 'user':
             data = getfollowedby(username[0])
-        else:
+        elif len(username[0]) == 11:
             data = getreelsinfo(username[0])
+        else:
+            data = ("Private Reels are not Supported, Try above link", 
+                    "https://indown.io/private-reels-download")
         # print(data)
 
         return render_template('index.html', 
