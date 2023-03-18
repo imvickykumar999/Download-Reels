@@ -5,7 +5,15 @@ import requests
 
 app = Flask(__name__)
 
-def getfollowedby(url):
+def getreelsinfo(url = 'ClwrpW1BB-R'):
+    """View Instagram user follower count"""
+    link = f'https://www.instagram.com/p/{url}/?&__a=1&__d=1'
+
+    user = requests.get(link)
+    a = user.json()
+    return a
+
+def getfollowedby(url = 'vix.bot'):
     """View Instagram user follower count"""
     link = f'https://www.instagram.com/{url}/?__a=1&__d=1'
     user = requests.get(link)
@@ -34,6 +42,7 @@ def home():
         username = getname(request.form['username'])
         data = getfollowedby(username)
 
+        # reel_data = getreelsinfo()
         return render_template('index.html', 
             username=username, data=data[0], 
             full_data=data[1], 
@@ -44,4 +53,3 @@ if __name__ == '__main__':
     app.secret_key = "123"
     app.run(debug=True)
 
-# https://www.instagram.com/p/Cp1dAGxrmAl/?&__a=1&__d=1
