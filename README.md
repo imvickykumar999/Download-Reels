@@ -1,4 +1,36 @@
-# # To [download](https://scontent.cdninstagram.com/o1/v/t16/f1/m82/C54567487C200E0D06C79C5DA03A559A_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uNDgwLmNsaXBzLmJhc2VsaW5lIn0&_nc_ht=instagram.fdel5-2.fna.fbcdn.net&_nc_cat=106&vs=192854153373476_3058706972&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9DNTQ1Njc0ODdDMjAwRTBEMDZDNzlDNURBMDNBNTU5QV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0NWRkJoT01adk1xNWNvQUFQVGszQ1VNSC0xNWJwUjFBQUFGFQICyAEAKAAYABsAFQAAJtSAt%2FGMkuQ%2FFQIoAkMzLBdAYqiDEm6XjRgSZGFzaF9iYXNlbGluZV8yX3YxEQB1%2FgcA&_nc_rid=d8c8924743&ccb=9-4&oh=00_AfD-gNBzhSBRCrIFsSbKmThN1dzDo0ZV_alerSyCmlqDDA&oe=640A279B&_nc_sid=74f7ba) `Public @ Account's` [Reels](https://www.instagram.com/reel/CpiBBfCvGEW/?utm_source=ig_web_copy_link), manually :
+# # *To* [download](https://scontent.cdninstagram.com/o1/v/t16/f1/m82/C54567487C200E0D06C79C5DA03A559A_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uNDgwLmNsaXBzLmJhc2VsaW5lIn0&_nc_ht=instagram.fdel5-2.fna.fbcdn.net&_nc_cat=106&vs=192854153373476_3058706972&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC9DNTQ1Njc0ODdDMjAwRTBEMDZDNzlDNURBMDNBNTU5QV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0NWRkJoT01adk1xNWNvQUFQVGszQ1VNSC0xNWJwUjFBQUFGFQICyAEAKAAYABsAFQAAJtSAt%2FGMkuQ%2FFQIoAkMzLBdAYqiDEm6XjRgSZGFzaF9iYXNlbGluZV8yX3YxEQB1%2FgcA&_nc_rid=d8c8924743&ccb=9-4&oh=00_AfD-gNBzhSBRCrIFsSbKmThN1dzDo0ZV_alerSyCmlqDDA&oe=640A279B&_nc_sid=74f7ba) `Public @ Account's` [Reels](https://www.instagram.com/reel/CpiBBfCvGEW/?utm_source=ig_web_copy_link), *manually* :
+
+## >>> `Download Reels` *by* `Username` 
+*( easy and effective Steps ... )*
+
+<br>
+
+> *Copy profile `username` (say) [vix.bot](https://www.instagram.com/vix.bot/)*
+> 
+> *Paste `?__a=1&__d=1` at end of link as shown below.*
+>
+> **https://www.instagram.com/vix.bot/?__a=1&__d=1**
+      
+<br>
+
+      Open above link in new tab and,
+      Press Ctrl+F and paste following words to search downloadable links.
+      
+      - video_url
+      - display_url
+      - thumbnail_src
+
+<hr>
+
+## [`Hosted on pythonanywhere.com`](https://imvickykumar999.pythonanywhere.com/)
+
+- [`Download`](https://github.com/imvickykumar999/Download-Reels/tree/main/Reels%20Downloader%20in%20Flask) *and* `Run @` http://127.0.0.1:5000/
+
+> ![image](https://user-images.githubusercontent.com/50515418/226088345-e51d082f-f8e6-42b6-b0a7-4d0510b22753.png)
+
+-----------------
+
+## >>> `Download Reels` *by* `Reel ID`
 
 - Click on `3 dots` on reel.
 
@@ -23,7 +55,7 @@
 - Paste `o1/v/t16/f1/m82` in top right search box `to download Video`
 
 ### To download video, copy this part.
-![image](https://user-images.githubusercontent.com/50515418/218238477-c90a658d-c3b4-4e90-8025-b39381f4e6b9.png)
+> ![image](https://user-images.githubusercontent.com/50515418/218238477-c90a658d-c3b4-4e90-8025-b39381f4e6b9.png)
 
 - Paste in new tab to open video link.
 - Press 3 dots on botton right and press download.
@@ -33,7 +65,7 @@
 - Paste `progressive_download_url` in top right search box `to download Audio`
 
 ### To download audio, copy this part.
-![image](https://user-images.githubusercontent.com/50515418/218238598-4b501eb8-5242-496f-bd3d-c208a7d8f86a.png)
+> ![image](https://user-images.githubusercontent.com/50515418/218238598-4b501eb8-5242-496f-bd3d-c208a7d8f86a.png)
 
 - Paste in new tab to open audio link.
 - Press 3 dots on right and press download.
