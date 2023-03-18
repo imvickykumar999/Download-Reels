@@ -20,9 +20,13 @@ def getfollowedby(url):
 
 def getname(url):
     """Split the URL from the username"""
-    sp = url.split("instagram.com/")
-    rep = sp[0].replace("/", "")
-    return rep
+    url = list(url.split('/'))
+    
+    if 'https:' in url:
+        url = url[3]
+    else:
+        url = url[0]
+    return url
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -39,3 +43,5 @@ def home():
 if __name__ == '__main__':
     app.secret_key = "123"
     app.run(debug=True)
+
+# https://www.instagram.com/p/Cp1dAGxrmAl/?&__a=1&__d=1
