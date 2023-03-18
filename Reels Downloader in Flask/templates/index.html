@@ -16,21 +16,17 @@
 			<hr>
 				<div>
 					<a href="/">
-						<h2>Search New Public Account</h2>
+						<h1>Home</h1>
 					</a>
 				</div>
 			<hr>
 					
 		{% if data == {} or itis == 'user' %}
 			<a target='__blank' href="https://www.instagram.com/{{username.lower()}}/">
-				<h3>Followers = {{data}}</h3>
+				<font color="Green"> 
+					<h3>Followers = {{data}}</h3>
+				</font>
 			</a>
-
-			<br>
-			<strong>
-				Download Images or Videos
-			</strong>
-			<br>
 		</center>
 
 			<table>				
@@ -76,36 +72,57 @@
 
 		{% elif itis == 'reels' %}
 			<font color="Green"> 
-				<h2>Download Reel</h2>
+				<h3>Download Reel</h3>
 			</font>
 			<hr>
 
-			<font color="Red"> 
-				<h4>Video URL</h4>
-			</font>
-			<br>
+			<table border="10">
+				<tr>
+					<td>
+						<a target="_blank" href="{{ full_data }}">
+							<font color="Blue"> Video URL </font>
+						</a>
+					</td>
 
-			<a target = "_blank" alt="video_url" href="{{full_data}}">
-				{{full_data}}
-			</a>			
-			<hr>
+					<td> {{ full_data }} </td>
+				</tr>
 
-			<font color="Red"> 
-				Thumbnail URL
-			</font>
-			<br>
+				<tr>
+					<td>
+						<a target="_blank" href="{{ data }}">
+							<font color="Blue"> Thumbnail URL </font>
+						</a>
+					</td>
 
-			<a target = "_blank" alt="display_url" href="{{data}}">
-				{{data}}
-			</a>			
-			<hr>
+					<td> {{ data }} </td>
+				</tr>
+			</table>
 
 		{% else %}
 			<br>
 			<form action="/" method="POST">
 				<input type="username" name="username" placeholder="Username/Reels / URL/ID">
-				<input type="submit" value="Finds">
+				<input type="submit" value="Find">
 			</form>
+
+			<br> <hr> <br>
+			<table border="10">
+				<tr>
+					<th>Either Copy Link from Browser (see below ss)</th>
+					<th>Or Copy Link from Mobile App (see below ss)</th>
+				</tr>
+				
+				<tr>
+					<td><img src="https://user-images.githubusercontent.com/50515418/218237891-2159d910-6a8e-4abe-991e-0ad1c00e1efb.png" alt="3" width = 400px></td>
+					<td><img src="https://user-images.githubusercontent.com/50515418/218239639-5dc9242c-e4ea-48bd-8b05-f50113e9ad96.png" alt="4" width = 400px></td>
+				</tr>
+
+				<tr>
+					<th>Try either Reel URL or ReelID e.g., ClwrpW1BB-R</th>
+					<th>Try either Profile URL or UserID e.g., vix.bot</th>
+				</tr>
+			</table>
+
 		{% endif %}
 
 
