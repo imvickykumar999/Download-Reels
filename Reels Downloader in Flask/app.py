@@ -11,7 +11,10 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
 
     user = requests.get(link)
     a = user.json()
-    return a
+
+    b = a['graphql']['shortcode_media']['video_url']
+    c = a['graphql']['shortcode_media']['display_url']
+    return c, b
 
 def getfollowedby(url = 'vix.bot'):
     """View Instagram user follower count"""
@@ -29,25 +32,39 @@ def getfollowedby(url = 'vix.bot'):
 def getname(url):
     """Split the URL from the username"""
     url = list(url.split('/'))
-    
-    if 'https:' in url:
-        url = url[3]
-    else:
+
+    if len(url) == 1:
         url = url[0]
-    return url
+        itis = 'user'
+
+        if len(url) == 11 and url[0] == 'C':
+            itis = 'reels'
+    else:
+        if url[3] == 'reel' or url[3] == 'p':
+            url = url[4]
+            itis = 'reels'
+        else:
+            url = url[3]
+            itis = 'user'
+
+    return url, itis
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
         username = getname(request.form['username'])
-        data = getfollowedby(username)
+        
+        if username[1] == 'user':
+            data = getfollowedby(username[0])
+        else:
+            data = getreelsinfo(username[0])
+        # print(data)
 
-        # reel_data = getreelsinfo()
         return render_template('index.html', 
-            username=username, data=data[0], 
-            full_data=data[1], 
+            username=username[0], data=data[0], 
+            itis=username[1], full_data=data[1], 
             )
-    return render_template('index.html')
+    return render_template('index.html', data='')
 
 if __name__ == '__main__':
     app.secret_key = "123"

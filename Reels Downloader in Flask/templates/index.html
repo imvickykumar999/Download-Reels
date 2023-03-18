@@ -20,16 +20,16 @@
 					</a>
 				</div>
 			<hr>
-		{% if data %}
-
+					
+		{% if data == {} or itis == 'user' %}
 			<a target='__blank' href="https://www.instagram.com/{{username.lower()}}/">
 				<h3>Followers = {{data}}</h3>
 			</a>
 
 			<br>
-				<strong>
-					Download Images or Videos
-				</strong>
+			<strong>
+				Download Images or Videos
+			</strong>
 			<br>
 		</center>
 
@@ -74,10 +74,36 @@
 			</font>
 		</center>
 
+		{% elif itis == 'reels' %}
+			<font color="Green"> 
+				<h2>Download Reel</h2>
+			</font>
+			<hr>
+
+			<font color="Red"> 
+				<h4>Video URL</h4>
+			</font>
+			<br>
+
+			<a target = "_blank" alt="video_url" href="{{full_data}}">
+				{{full_data}}
+			</a>			
+			<hr>
+
+			<font color="Red"> 
+				Thumbnail URL
+			</font>
+			<br>
+
+			<a target = "_blank" alt="display_url" href="{{data}}">
+				{{data}}
+			</a>			
+			<hr>
+
 		{% else %}
 			<br>
 			<form action="/" method="POST">
-				<input type="username" name="username" placeholder="Profile Link">
+				<input type="username" name="username" placeholder="Username/Reels / URL/ID">
 				<input type="submit" value="Finds">
 			</form>
 		{% endif %}
