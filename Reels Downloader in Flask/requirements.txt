@@ -1,5 +1,0 @@
-Flask
-Flask-SQLAlchemy
-requests
-gunicorn==20.1.0
-eventlet==0.30.2

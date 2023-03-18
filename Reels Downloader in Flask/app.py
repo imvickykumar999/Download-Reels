@@ -1,86 +1,40 @@
 """Flask Login Example and instagram fallowing find"""
 
-from flask import Flask, url_for, render_template, request, redirect, session
-from flask_sqlalchemy import SQLAlchemy
-from instagram import getfollowedby, getname
-
+from flask import Flask, render_template, request
+import requests
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
-db = SQLAlchemy(app)
 
+def getfollowedby(url):
+    """View Instagram user follower count"""
+    link = f'https://www.instagram.com/{url}/?__a=1&__d=1'
+    user = requests.get(link)
 
-class User(db.Model):
-    """ Create user table"""
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True)
-    password = db.Column(db.String(80))
+    a = user.json()
+    b = a['graphql']['user']['edge_followed_by']['count']
+    
+    c = a['graphql']['user']['edge_felix_video_timeline']['edges']
+    d = a['graphql']['user']['edge_owner_to_timeline_media']['edges']
+    return b, c+d
 
-    def __init__(self, username, password):
-        self.username = username
-        self.password = password
-
+def getname(url):
+    """Split the URL from the username"""
+    sp = url.split("instagram.com/")
+    rep = sp[0].replace("/", "")
+    return rep
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    """ Session control"""
-    if not session.get('logged_in'):
-        return render_template('index.html')
-    else:
-        if request.method == 'POST':
-            username = getname(request.form['username'])
-            data = getfollowedby(username)
-
-            return render_template('index.html', 
-                username=username, data=data[0], 
-                edge_felix_video_timeline=data[1], 
-                )
-        return render_template('index.html')
-
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    """Login Form"""
-    if request.method == 'GET':
-        return render_template('login.html')
-    else:
-        name = request.form['username']
-        passw = request.form['password']
-        try:
-            data = User.query.filter_by(username=name, password=passw).first()
-            print('\n=================> ', data)
-
-            if data is not None:
-                session['logged_in'] = True
-                return redirect(url_for('home'))
-            else:
-                return "Don't Login"
-        except Exception as e:
-            return e
-
-
-@app.route('/register/', methods=['GET', 'POST'])
-def register():
-    """Register Form"""
     if request.method == 'POST':
-        new_user = User(
-            username=request.form['username'],
-            password=request.form['password'])
-        db.session.add(new_user)
-        db.session.commit()
-        return render_template('login.html')
-    return render_template('register.html')
+        username = getname(request.form['username'])
+        data = getfollowedby(username)
 
-
-@app.route("/logout")
-def logout():
-    """Logout Form"""
-    session['logged_in'] = False
-    return redirect(url_for('home'))
-
+        return render_template('index.html', 
+            username=username, data=data[0], 
+            full_data=data[1], 
+            )
+    return render_template('index.html')
 
 if __name__ == '__main__':
-    app.debug = True
-    db.create_all()
     app.secret_key = "123"
     app.run(debug=True)
