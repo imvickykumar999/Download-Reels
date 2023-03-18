@@ -10,7 +10,9 @@
 > *Copy profile `username` (say) [vix.bot](https://www.instagram.com/vix.bot/)*
 > 
 > *Paste `?__a=1&__d=1` at end of link as shown below.*
->
+> 
+> ( Note : __ underscore _ is 2 times.)
+> 
 > **https://www.instagram.com/vix.bot/?__a=1&__d=1**
       
 <br>
@@ -58,9 +60,10 @@
 
 ---------------------------
 
-- Paste `o1/v/t16/f1/m82` in top right search box `to download Video`
+### Paste `o1/v/t16/f1/m82` in top right search box `to download Video`
 
-### To download video, copy this part.
+- To download video, copy this part.
+
 > ![image](https://user-images.githubusercontent.com/50515418/218238477-c90a658d-c3b4-4e90-8025-b39381f4e6b9.png)
 
 - Paste in new tab to open video link.
@@ -68,9 +71,10 @@
 
 ------------------------
 
-- Paste `progressive_download_url` in top right search box `to download Audio`
+### Paste `progressive_download_url` in top right search box `to download Audio`
 
-### To download audio, copy this part.
+- To download audio, copy this part.
+
 > ![image](https://user-images.githubusercontent.com/50515418/218238598-4b501eb8-5242-496f-bd3d-c208a7d8f86a.png)
 
 - Paste in new tab to open audio link.
