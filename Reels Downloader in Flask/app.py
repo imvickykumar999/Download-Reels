@@ -11,6 +11,7 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
 
     user = requests.get(link)
     a = user.json()
+    # print(a)
 
     b = a['graphql']['shortcode_media']['video_url']
     c = a['graphql']['shortcode_media']['display_url']
