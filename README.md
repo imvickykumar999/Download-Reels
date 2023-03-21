@@ -2,6 +2,34 @@
 
 <hr>
 
+## *`Run`* **flask** *on* [`Android`](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3) `App` : **Tutorial on YouTube** [*Video*](https://youtu.be/cuJqNN1k3QY)
+
+<table>
+<tr>
+
+<td>
+<a href="https://www.instagram.com/stories/highlights/17970182708194681/">
+Instagram Story
+</a>
+</td>
+
+<td>
+<a href="https://youtu.be/cuJqNN1k3QY">
+YouTube Video
+</a>
+</td>
+
+</tr>
+
+<tr>
+<td><img src="https://user-images.githubusercontent.com/50515418/226516770-4b46dee3-f8ab-4359-bafd-08cf6d5911af.png" alt="3" height = 400px></td>
+<td><img src="https://user-images.githubusercontent.com/50515418/226517292-1492eee9-3110-4e9b-a4ff-8b32c21d5ce1.png" alt="4" height = 400px></td>
+</tr>
+
+</table>
+
+---------------------
+
 ## >>> `Download Reels` *by* `Username` 
 *( easy and effective Steps ... )*
 
