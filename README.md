@@ -20,10 +20,9 @@ YouTube Video
 </td>
 
 </tr>
-
 <tr>
-<td><img src="https://user-images.githubusercontent.com/50515418/226516770-4b46dee3-f8ab-4359-bafd-08cf6d5911af.png" alt="3" height = 400px></td>
-<td><img src="https://user-images.githubusercontent.com/50515418/226517292-1492eee9-3110-4e9b-a4ff-8b32c21d5ce1.png" alt="4" height = 400px></td>
+<td><img src="https://user-images.githubusercontent.com/50515418/228512796-e0a82ea4-9049-4418-a59b-69cddd25d012.png" alt="3" height = 800px></td>
+<td><img src="https://user-images.githubusercontent.com/50515418/228513195-128cdf2e-19ff-4e41-b871-859570a686e2.png" alt="4" height = 800px></td>
 </tr>
 
 </table>
