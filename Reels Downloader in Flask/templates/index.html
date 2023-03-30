@@ -29,35 +29,33 @@
 			</a>
 		</center>
 
-			<table>				
-				{% for i in full_data %}
-					{% for key, value in i.items() %}
-						<tr>
-							<table border="10">
+			{% for i in full_data %}
+				{% for key, value in i.items() %}
+					<tr>
+						<table border="10">
+								
+							{% for x, y in value.items() %}
+								<tr>
 									
-								{% for x, y in value.items() %}
-									<tr>
-										
-										{% if x == "display_url" or x == "thumbnail_src" or x == "video_url" %}
-											<td>
-												<a target="_blank" href="{{ y }}">
-													<font color="Blue"> {{ x }} </font>
-												</a>
-											</td>
+									{% if x == "display_url" or x == "thumbnail_src" or x == "video_url" %}
+										<td>
+											<a target="_blank" href="{{ y }}">
+												<font color="Blue"> {{ x }} </font>
+											</a>
+										</td>
 
-											<td> {{ y }} </td>
-										{% endif %}
+										<td> {{ y }} </td>
+									{% endif %}
 
-									</tr>
-								{% endfor %}
+								</tr>
+							{% endfor %}
 
-								<br> <hr> <br>
-							</table>
+							<br> <hr> <br>
+						</table>
 
-						</tr>
-					{% endfor %}
+					</tr>
 				{% endfor %}
-			</table>
+			{% endfor %}
 
 
 		<hr>
@@ -74,27 +72,30 @@
 			</font>
 			<hr>
 
-			<table border="10">
-				<tr>
-					<td>
-						<a target="_blank" href="{{ full_data }}">
-							<font color="Blue"> Video URL </font>
-						</a>
-					</td>
+			{% for i,j in zip(full_data, data) %}
+				<table border="10">
+					<tr>
+						<td>
+							<a target="_blank" href="{{ i }}">
+								<font color="Blue"> Video URL </font>
+							</a>
+						</td>
 
-					<td> {{ full_data }} </td>
-				</tr>
+						<td> {{ i }} </td>
+					</tr>
 
-				<tr>
-					<td>
-						<a target="_blank" href="{{ data }}">
-							<font color="Blue"> Thumbnail URL </font>
-						</a>
-					</td>
+					<tr>
+						<td>
+							<a target="_blank" href="{{ j }}">
+								<font color="Blue"> Thumbnail URL </font>
+							</a>
+						</td>
 
-					<td> {{ data }} </td>
-				</tr>
-			</table>
+						<td> {{ j }} </td>
+					</tr>
+				</table>
+			<br> <hr> <br>
+			{% endfor %}
 
 		{% else %}
 			<br>
