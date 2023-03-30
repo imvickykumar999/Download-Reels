@@ -1,7 +1,7 @@
 """Flask Login Example and instagram fallowing find"""
 
 from flask import Flask, render_template, request
-import requests
+import urllib.request, requests
 
 # import jinja2
 # env = jinja2.Environment()
@@ -24,6 +24,8 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
     else:
         try:
             d,e = [],[]
+            # print(x)
+
             for i in x['edge_sidecar_to_children']['edges']:
                 y = i['node']
 
@@ -31,15 +33,23 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
                     b = y['video_url']
                     c = y['display_resources'][-1]['src']
                 except:
-                    b = "Downloading Photos is not supported here" 
-                    c = "You can take Screenshot of Photos instead"
+                    b = "Downloading Multiple Photos isn't supported, Yet" 
+                    c = x['display_url']
 
                 d.append(b)
                 e.append(c)
             b,c = d,e
         except:
-            b = ["Downloading Photo is not supported here"] 
-            c = ["You can take Screenshot of Photos instead"]
+            b = ["Click Below Link to Download"] 
+            c = ["static/screenshot.jpg"]
+            try:
+                urllib.request.urlretrieve(x['display_url'], c[0])
+                b = ["Click Below Link to Download"] 
+                c = ["static/screenshot.jpg"]
+            except Exception as e:
+                b = ['Either No Internet or']
+                c = [e]
+
     return c,b
 
 
