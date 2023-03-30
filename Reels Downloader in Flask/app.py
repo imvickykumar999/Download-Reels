@@ -1,14 +1,11 @@
 """Flask Login Example and instagram fallowing find"""
 
 from flask import Flask, render_template, request
-import urllib.request, requests
-
-# import jinja2
-# env = jinja2.Environment()
-# env.globals.update(zip=zip)
+import requests
 
 app = Flask(__name__)
 app.jinja_env.globals.update(zip=zip)
+
 
 def getreelsinfo(url = 'ClwrpW1BB-R'):
     """View Instagram user follower count"""
@@ -24,8 +21,6 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
     else:
         try:
             d,e = [],[]
-            # print(x)
-
             for i in x['edge_sidecar_to_children']['edges']:
                 y = i['node']
 
@@ -33,23 +28,16 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
                     b = y['video_url']
                     c = y['display_resources'][-1]['src']
                 except:
-                    b = "Downloading Multiple Photos isn't supported, Yet" 
-                    c = x['display_url']
+                    b = "Click Below Link to Download Photo" 
+                    c = y['display_url']
 
                 d.append(b)
                 e.append(c)
             b,c = d,e
-        except:
-            b = ["Click Below Link to Download"] 
-            c = ["static/screenshot.jpg"]
-            try:
-                urllib.request.urlretrieve(x['display_url'], c[0])
-                b = ["Click Below Link to Download"] 
-                c = ["static/screenshot.jpg"]
-            except Exception as e:
-                b = ['Either No Internet or']
-                c = [e]
 
+        except:
+            b = ["Click Below Link to Download Photo"] 
+            c = [x['display_url']]
     return c,b
 
 
@@ -59,7 +47,6 @@ def getfollowedby(url = 'vix.bot'):
     user = requests.get(link)
 
     a = user.json()
-    # print(a)
     b = a['graphql']['user']['edge_followed_by']['count']
     
     c = a['graphql']['user']['edge_felix_video_timeline']['edges']
@@ -92,7 +79,6 @@ def getname(url):
 def home():
     if request.method == 'POST':
         username = getname(request.form['username'])
-        # print(username)
 
         if username[1] == 'user':
             data = getfollowedby(username[0])
