@@ -22,21 +22,25 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
         b = [x['video_url']]
         c = [x['display_url']]
     else:
-        d,e = [],[]
-        for i in x['edge_sidecar_to_children']['edges']:
-            y = i['node']
+        try:
+            d,e = [],[]
+            for i in x['edge_sidecar_to_children']['edges']:
+                y = i['node']
 
-            try:
-                b = y['video_url']
-                c = y['display_resources'][-1]['src']
-            except:
-                b = "Downloading Photos is not supported here" 
-                c = "You can take Screenshot of Photos instead"
+                try:
+                    b = y['video_url']
+                    c = y['display_resources'][-1]['src']
+                except:
+                    b = "Downloading Photos is not supported here" 
+                    c = "You can take Screenshot of Photos instead"
 
-            d.append(b)
-            e.append(c)
-        b,c = d,e
-    return c, b
+                d.append(b)
+                e.append(c)
+            b,c = d,e
+        except:
+            b = ["Downloading Photo is not supported here"] 
+            c = ["You can take Screenshot of Photos instead"]
+    return c,b
 
 
 def getfollowedby(url = 'vix.bot'):
