@@ -61,9 +61,21 @@
 		<hr>
 		<br> 
 		<center>
-			<font color="Red"> 
-				If you can't see any table, {{username}} might be a private account.
-			</font>
+			{% if not full_data %}
+				<font color="Red"> 
+					<h5>
+						{{username}} is a Private Account.
+					</h5>
+				</font>
+				<hr>
+
+				<br> <br>
+				Instead use below link
+				<br>
+				<a target="_blank" href="https://indown.io/private-reels-download">
+					https://indown.io/private-reels-download
+				</a>
+			{% endif %}
 		</center>
 
 		{% elif itis == 'reels' %}
