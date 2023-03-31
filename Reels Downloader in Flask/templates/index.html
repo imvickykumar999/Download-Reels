@@ -27,6 +27,15 @@
 					<h3>Followers = {{data}}</h3>
 				</font>
 			</a>
+
+			<hr> <br>
+			<a target='__blank' href="{{full_data[0]['node']['edge_media_to_tagged_user']['edges'][0]['node']['user']['profile_pic_url']}}">
+				<font color="Red"> 
+					<h4>
+						Profile Pic URL
+					</h4>
+				</font>
+			</a>
 		</center>
 
 			{% for i in full_data %}
