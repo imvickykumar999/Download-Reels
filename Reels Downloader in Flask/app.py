@@ -1,5 +1,7 @@
 """Flask Login Example and instagram fallowing find"""
 
+# import requests;print(requests.get('https://www.instagram.com/p/CqTC9d3vYlX/?__a=1&__d=1').json()['graphql']['shortcode_media']['edge_sidecar_to_children']['edges'][0]['node']['video_url'])
+
 from flask import Flask, render_template, request
 import requests
 
