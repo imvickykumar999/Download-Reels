@@ -67,7 +67,7 @@ def getname(url):
         if len(url) == 11 and url[0] == 'C':
             itis = 'reels'
     else:
-        if url[3] == 'reels' or url[3] == 'reel' or url[3] == 'p':
+        if url[3] in ['reels', 'reel', 'p']:
             url = url[4]
             itis = 'reels'
         else:
