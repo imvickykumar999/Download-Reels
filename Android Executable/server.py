@@ -10,9 +10,6 @@ with zipfile.ZipFile('android.zip', 'r') as zip_ref:
 
 print('''
 
-Public Server started at
-http://192.168.0.103:5000
-
 Access this link from any Device nearby.
 
 ''')
