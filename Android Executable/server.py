@@ -1,11 +1,11 @@
 
 import requests, zipfile, os
-URL = 'https://github.com/imvickykumar999/Download-Reels/releases/download/Public_IP/android.zip'
+URL = 'https://github.com/imvickykumar999/Download-Reels/raw/main/android.zip'
 
 r = requests.get(URL, allow_redirects=True)
-open('server.zip', 'wb').write(r.content)
+open('android.zip', 'wb').write(r.content)
 
-with zipfile.ZipFile('server.zip', 'r') as zip_ref:
+with zipfile.ZipFile('android.zip', 'r') as zip_ref:
     zip_ref.extractall('.')
 
 print('''
