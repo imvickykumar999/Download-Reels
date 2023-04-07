@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: DownloadReels
-Version: 0.0.1
+Version: 0.0.2
 Summary: Download Instagram Reels.
 Home-page: https://github.com/imvickykumar999/Download-Reels
 Author: Vicky Kumar
@@ -8,4 +8,9 @@ License: MIT
 Keywords: Download Reels,Videos,Photos
 License-File: License.txt
 
+
 'This package has Reel Downloader functions.'
+
+# Usage :
+
+`from DownloadReels import run_server`
