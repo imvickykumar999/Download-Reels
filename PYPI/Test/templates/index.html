@@ -1,0 +1,150 @@
+
+<html>
+	<head>
+		<title>
+			Filter and Download
+		</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+	</head>
+	<body>
+		<br>
+		<center>
+			<hr>
+				<div>
+					<a href="/">
+						<h1>Home</h1>
+					</a>
+				</div>
+			<hr> <br>
+					
+		{% if data == {} or itis == 'user' %}
+			<a target='__blank' href="https://www.instagram.com/{{username.lower()}}/">
+				<font color="Green"> 
+					<h3>Followers = {{data}}</h3>
+				</font>
+			</a>
+
+			<hr> <br>
+			<a target='__blank' href="{{full_data[0]['node']['edge_media_to_tagged_user']['edges'][0]['node']['user']['profile_pic_url']}}">
+				<font color="Red"> 
+					<h4>
+						Profile Pic URL
+					</h4>
+				</font>
+			</a>
+		</center>
+
+			{% for i in full_data %}
+				{% for key, value in i.items() %}
+					<tr>
+						<table border="5">
+								
+							{% for x, y in value.items() %}
+								<tr>
+									
+									{% if x == "display_url" or x == "thumbnail_src" or x == "video_url" %}
+										<td>
+											<a target="_blank" href="{{ y }}">
+												<font color="Blue"> {{ x }} </font>
+											</a>
+										</td>
+
+										<td> {{ y }} </td>
+									{% endif %}
+
+								</tr>
+							{% endfor %}
+
+							<br> <hr> <br>
+						</table>
+
+					</tr>
+				{% endfor %}
+			{% endfor %}
+
+
+		<hr>
+		<br> 
+		<center>
+			{% if not full_data %}
+				<font color="Red"> 
+					<h5>
+						{{username}} is a Private Account.
+					</h5>
+				</font>
+				<hr>
+
+				<br> <br>
+				Instead use below link
+				<br>
+				<a target="_blank" href="https://indown.io/private-reels-download">
+					https://indown.io/private-reels-download
+				</a>
+			{% endif %}
+		</center>
+
+		{% elif itis == 'reels' %}
+			<font color="Green"> 
+				<h3>Download Reel</h3>
+			</font>
+			<hr>
+
+			{% for i,j in zip(full_data, data) %}
+				<table border="5">
+					<tr>
+						<td>
+							<a target="_blank" href="{{ i }}">
+								<font color="Blue"> Video URL </font>
+							</a>
+						</td>
+
+						<td> {{ i }} </td>
+					</tr>
+
+					<tr>
+						<td>
+							<a target="_blank" href="{{ j }}">
+								<font color="Blue"> Thumbnail URL </font>
+							</a>
+						</td>
+
+						<td> {{ j }} </td>
+					</tr>
+				</table>
+			<br> <hr> <br>
+			{% endfor %}
+
+		{% else %}
+			<br>
+			<form action="/" method="POST">
+				<input type="username" name="username" placeholder="Username/Reels / URL/ID">
+				<input type="submit" value="Find">
+			</form>
+
+			<br> <hr> <br>
+			<table border="5">
+				<tr>
+					<th>Either Copy Link from Browser (see below ss)</th>
+					<th>Or Copy Link from Mobile App (see below ss)</th>
+				</tr>
+
+				<tr>
+					<td><img src="https://user-images.githubusercontent.com/50515418/218237891-2159d910-6a8e-4abe-991e-0ad1c00e1efb.png" alt="3" width = 400px></td>
+					<td><img src="https://user-images.githubusercontent.com/50515418/218239639-5dc9242c-e4ea-48bd-8b05-f50113e9ad96.png" alt="4" width = 400px></td>
+				</tr>
+
+				<tr>
+					<th>Try either Reel URL or ReelID e.g., ClwrpW1BB-R</th>
+					<th>Try either Profile URL or Username e.g., vix.bot</th>
+				</tr>
+			</table>
+
+		{% endif %}
+
+
+	</body>
+</html>
