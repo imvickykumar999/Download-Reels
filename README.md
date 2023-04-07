@@ -1,9 +1,18 @@
+# `3 step process in CMD`
 
-# *`Run`* [**`server.py`**](https://github.com/imvickykumar999/Download-Reels/blob/ca4dd21a8e49f34110a788589b7cf6518763fb13/Android%20Executable/server.py#L13) *on* [`Android`](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3) `App` : **Tutorial on YouTube** [*Video*](https://youtu.be/cuJqNN1k3QY)
+      >>> pip install DownloadReels
+      >>> python
+      >>> from DownloadReels import run_server
 
-![image](https://user-images.githubusercontent.com/50515418/230557758-8c26a077-4fd9-4706-97b6-3974282c0e10.png)
+<br>
+
+[![image](https://user-images.githubusercontent.com/50515418/230557758-8c26a077-4fd9-4706-97b6-3974282c0e10.png)](https://pypi.org/project/DownloadReels/)
+
+- `🎊 My new` [`package`](https://pypi.org/project/DownloadReels/) `published 🎉`
 
 ---------------------
+
+## *`Run`* [**`server.py`**](https://github.com/imvickykumar999/Download-Reels/blob/ca4dd21a8e49f34110a788589b7cf6518763fb13/Android%20Executable/server.py#L13) *on* [`Android`](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3) `App` : **Tutorial on YouTube** [*Video*](https://youtu.be/cuJqNN1k3QY)
 
 https://user-images.githubusercontent.com/50515418/230372182-6f5a59b1-08ee-4e33-a08d-663c44139526.mp4
 
