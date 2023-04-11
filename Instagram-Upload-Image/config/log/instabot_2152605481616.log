@@ -1,0 +1,18 @@
+2023-04-11 09:16:30,141 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-04-11 09:16:30,142 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\Vicky\Desktop\Repository\Download-Reels\Instagram-Upload-Image\instabot\bot\bot.py
+2023-04-11 09:16:30,143 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-04-11 09:16:30,642 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [429]>
+2023-04-11 09:16:30,643 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"Please wait a few minutes before you try again.","status":"fail"}'
+2023-04-11 09:16:30,643 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2023-04-11 09:16:31,052 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-04-11 09:16:31,447 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-04-11 09:16:31,812 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [429]>
+2023-04-11 09:16:31,813 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"Please wait a few minutes before you try again.","status":"fail"}'
+2023-04-11 09:16:31,813 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2023-04-11 09:16:35,470 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-04-11 09:16:35,471 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"challenge_required","challenge":{"url":"https://i.instagram.com/challenge/AXFJwc9IHl6atTSAlQ3NT6M6DoWxpxemTtjc39Bq1RKXXpw6anD_HjSTPNB8lJEhUbbG6I0/Afygk5GRnfP-Fho50MIu8qLMca44M1CbFzs_d1l3qgv3vf0kqbMsUMpkdjHnkfjbm0ronki8RXotXg/","api_path":"/challenge/AXFJwc9IHl6atTSAlQ3NT6M6DoWxpxemTtjc39Bq1RKXXpw6anD_HjSTPNB8lJEhUbbG6I0/Afygk5GRnfP-Fho50MIu8qLMca44M1CbFzs_d1l3qgv3vf0kqbMsUMpkdjHnkfjbm0ronki8RXotXg/","hide_webview_header":true,"lock":true,"logout":false,"native_flow":true,"flow_render_type":0},"status":"fail","error_type":"checkpoint_challenge_required"}'
+2023-04-11 09:16:35,472 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-04-11 09:16:35,473 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: challenge_required
+2023-04-11 09:16:35,474 - instabot version: 0.117.0 (api) - INFO - Error type: checkpoint_challenge_required
+2023-04-11 09:16:38,280 - instabot version: 0.117.0 (api_photo) - ERROR - Photo Upload failed with the following response: <Response [403]>
+2023-04-11 09:16:38,283 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'to_upload/1681184779.6985176.jpg' is not uploaded.
