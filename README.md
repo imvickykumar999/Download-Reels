@@ -68,7 +68,7 @@ YouTube Video
 > 
 > ( Note : __ underscore _ is 2 times.)
 > 
-> **https://www.instagram.com/vix.bot/?__a=1&__d=1**
+> **https://www.instagram.com/vix.bot/channel/?__a=1&__d=1**
       
 <br>
 
