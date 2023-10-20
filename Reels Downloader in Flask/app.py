@@ -10,7 +10,7 @@ app.jinja_env.globals.update(zip=zip)
 
 def getreelsinfo(url = 'ClwrpW1BB-R'):
     """View Instagram user follower count"""
-    link = f'https://www.instagram.com/p/{url}/?&__a=1&__d=1'
+    link = f'https://www.instagram.com/p/{url}/channel/?&__a=1&__d=dis'
 
     user = requests.get(link)
     a = user.json()
@@ -44,7 +44,7 @@ def getreelsinfo(url = 'ClwrpW1BB-R'):
 
 def getfollowedby(url = 'vix.bot'):
     """View Instagram user follower count"""
-    link = f'https://www.instagram.com/{url}/?__a=1&__d=dis'
+    link = f'https://www.instagram.com/{url}/channel/?__a=1&__d=dis'
     user = requests.get(link)
 
     a = user.json()

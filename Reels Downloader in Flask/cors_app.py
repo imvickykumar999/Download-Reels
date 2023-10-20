@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def helloWorld(url = 'CxKin2BSv3Q'):
-    link = f'https://www.instagram.com/p/{url}/?&__a=1&__d=1'
+    link = f'https://www.instagram.com/p/{url}/channel/?&__a=1&__d=1'
     user = requests.get(link)
     a = user.json()
     return a
