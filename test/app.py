@@ -48,11 +48,12 @@ def getfollowedby(url = 'vix.bot'):
     user = requests.get(link)
 
     a = user.json()
-    b = a['graphql']['user']['edge_followed_by']['count']
+    print(a)
+    # b = a['graphql']['user']['edge_followed_by']['count']
     
-    c = a['graphql']['user']['edge_felix_video_timeline']['edges']
-    d = a['graphql']['user']['edge_owner_to_timeline_media']['edges']
-    return b, c+d
+    # c = a['graphql']['user']['edge_felix_video_timeline']['edges']
+    # d = a['graphql']['user']['edge_owner_to_timeline_media']['edges']
+    # return b, c+d
 
 
 def getname(url):
