@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "4f7ab936-4b74-4ac0-bf86-962253929560",
+		"name": "Social Media Video Downloader",
+		"description": "**Instagram** : [https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest/playground/apiendpoint_26d5e416-abc2-4144-936d-f965c6f4f779](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest/playground/apiendpoint_26d5e416-abc2-4144-936d-f965c6f4f779)\n\n**Facebook** : [https://rapidapi.com/ugoBoy/api/fb-video-reels/playground/apiendpoint_18d90700-cfb6-476b-9c49-b1a725d2b10e](https://rapidapi.com/ugoBoy/api/fb-video-reels/playground/apiendpoint_18d90700-cfb6-476b-9c49-b1a725d2b10e)\n\n**YouTube** : [https://rapidapi.com/FarhanAliOfficial/api/youtube-downloader31/playground/apiendpoint_dc427eba-ff44-42c5-be51-c8189f3b9848](https://rapidapi.com/FarhanAliOfficial/api/youtube-downloader31/playground/apiendpoint_dc427eba-ff44-42c5-be51-c8189f3b9848)\n\n**Twitter** : [https://rapidapi.com/JustMobi/api/twitter-downloader-download-twitter-videos-gifs-and-images/playground/apiendpoint_122abc35-1aef-4743-8f58-31b2d590f351](https://rapidapi.com/JustMobi/api/twitter-downloader-download-twitter-videos-gifs-and-images/playground/apiendpoint_122abc35-1aef-4743-8f58-31b2d590f351)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34005341",
+		"_collection_link": "https://warped-comet-915880.postman.co/workspace/021e59ad-6229-436e-8a1a-b8db03fab185/collection/34005341-4f7ab936-4b74-4ac0-bf86-962253929560?action=share&source=collection_link&creator=34005341"
+	},
+	"item": [
+		{
+			"name": "Instagram",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response body",
+							"let responseData = pm.response.json();",
+							"",
+							"// Get the video_url value",
+							"let videoUrl = responseData.data.video_url;",
+							"",
+							"// Log the video_url value",
+							"console.log(\"Video URL:\", videoUrl);",
+							"",
+							"// Set it as a Postman environment variable (optional)",
+							"pm.environment.set(\"video_url\", videoUrl);",
+							"",
+							"// Test to ensure the value is extracted successfully and print it in the test results",
+							"pm.test(videoUrl, function() {",
+							"    pm.expect(videoUrl).to.exist;",
+							"});",
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>Field</th>",
+							"        <th>Value</th>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>id</td>",
+							"        <td>{{response.data.id}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>shortcode</td>",
+							"        <td>{{response.data.shortcode}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>thumbnail_src</td>",
+							"        <td>{{response.data.thumbnail_src}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>dimensions - height</td>",
+							"        <td>{{response.data.dimensions.height}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>dimensions - width</td>",
+							"        <td>{{response.data.dimensions.width}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>sharing_friction_info - should_have_sharing_friction</td>",
+							"        <td>{{response.data.sharing_friction_info.should_have_sharing_friction}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>has_audio</td>",
+							"        <td>{{response.data.has_audio}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>video_url</td>",
+							"        <td>{{response.data.video_url}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>video_view_count</td>",
+							"        <td>{{response.data.video_view_count}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>owner - id</td>",
+							"        <td>{{response.data.owner.id}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>owner - username</td>",
+							"        <td>{{response.data.owner.username}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>owner - is_verified</td>",
+							"        <td>{{response.data.owner.is_verified}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>edge_media_to_caption - created_at</td>",
+							"        <td>{{response.data.edge_media_to_caption.edges.[0].node.created_at}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>edge_media_to_caption - text</td>",
+							"        <td>{{response.data.edge_media_to_caption.edges.[0].node.text}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>edge_media_to_caption - id</td>",
+							"        <td>{{response.data.edge_media_to_caption.edges.[0].node.id}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>like_and_view_counts_disabled</td>",
+							"        <td>{{response.data.like_and_view_counts_disabled}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>taken_at_timestamp</td>",
+							"        <td>{{response.data.taken_at_timestamp}}</td>",
+							"    </tr>",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    return { response: pm.response.json() }",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-key",
+						"value": "{{x-rapidapi-key}}",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-host",
+						"value": "instagram-bulk-scraper-latest.p.rapidapi.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://instagram-bulk-scraper-latest.p.rapidapi.com/media_info_from_shortcode/{{InstaVideoCode}}",
+					"protocol": "https",
+					"host": [
+						"instagram-bulk-scraper-latest",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"media_info_from_shortcode",
+						"{{InstaVideoCode}}"
+					],
+					"query": [
+						{
+							"key": "InstaVideoCode",
+							"value": "C9kRWKGv3Ie",
+							"description": "CwqI-QTpUG2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Facebook",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response body",
+							"let responseData = pm.response.json();",
+							"",
+							"// Extract the value for \"video_render_720p_0\"",
+							"let videoLink = responseData.links.find(link => link.quality === \"video_render_720p_0\").link;",
+							"",
+							"// Log the video link",
+							"console.log(\"720p Video Link:\", videoLink);",
+							"",
+							"// Set it as an environment variable (optional)",
+							"pm.environment.set(\"video_render_720p_0_link\", videoLink);",
+							"",
+							"// Test to ensure the value is extracted successfully and print it in the test results",
+							"pm.test(videoLink, function() {",
+							"    pm.expect(videoLink).to.exist;",
+							"});",
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <th>Quality</th>",
+							"        <th>Link</th>",
+							"    </tr>",
+							"    ",
+							"    {{#each response.links}}",
+							"        <tr>",
+							"            <td>{{quality}}</td>",
+							"            <td>{{link}}</td>",
+							"        </tr>",
+							"    {{/each}}",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    return {response: pm.response.json()}",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-key",
+						"value": "{{x-rapidapi-key}}",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-host",
+						"value": "fb-video-reels.p.rapidapi.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fb-video-reels.p.rapidapi.com/smvd/get/all?url=https://www.facebook.com/reel/975590503451951",
+					"protocol": "https",
+					"host": [
+						"fb-video-reels",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"smvd",
+						"get",
+						"all"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.facebook.com/reel/975590503451951"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YouTube",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response JSON",
+							"let responseData = pm.response.json();",
+							"",
+							"// Access the video URL directly from the path data.video_with_audio[1]",
+							"let videoUrl = responseData.data.video_with_audio[1].url;",
+							"",
+							"// Print the video URL in the console",
+							"console.log(\"Video URL for 720p quality:\", videoUrl);",
+							"",
+							"// Test to ensure the URL was extracted correctly and print the value",
+							"pm.test(\"720p video URL is present\", function() {",
+							"    pm.expect(videoUrl).to.exist;",
+							"    pm.test(videoUrl, function() {",
+							"        pm.expect(videoUrl).to.be.a('string'); // Additional check to ensure it's a string",
+							"    });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-key",
+						"value": "{{x-rapidapi-key}}",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-host",
+						"value": "youtube-downloader31.p.rapidapi.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://youtube-downloader31.p.rapidapi.com/download.php?url=https://www.youtube.com/watch?v=UzHHNVtiRMc",
+					"protocol": "https",
+					"host": [
+						"youtube-downloader31",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"download.php"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.youtube.com/watch?v=UzHHNVtiRMc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Twitter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response body",
+							"let responseData = pm.response.json();",
+							"",
+							"// Extract the video variants array",
+							"let videoVariants = responseData.media.video.videoVariants;",
+							"",
+							"// Find the variant with the maximum bitrate",
+							"let maxBitrateVariant = videoVariants.reduce((prev, current) => {",
+							"    return (prev.bitrate > current.bitrate) ? prev : current;",
+							"});",
+							"",
+							"// Log the URL with the maximum bitrate",
+							"console.log(\"Video URL with maximum bitrate:\", maxBitrateVariant.url);",
+							"",
+							"// Set the value as an environment variable (optional)",
+							"pm.environment.set(\"max_bitrate_video_url\", maxBitrateVariant.url);",
+							"",
+							"// Test to ensure the URL is extracted correctly",
+							"pm.test(\"Max Bitrate Video URL exists\", function () {",
+							"    pm.expect(maxBitrateVariant.url).to.exist;",
+							"});",
+							"",
+							"var template = `",
+							"<style type=\"text/css\">",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+							"    .tftable tr {background-color:#ffffff;}",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+							"    .tftable tr:hover {background-color:#e0ffff;}",
+							"    .tftable td:first-child {font-weight: bold; background-color: #e0ffff;}",
+							"</style>",
+							"",
+							"<table class=\"tftable\" border=\"1\">",
+							"    <tr>",
+							"        <td>Created At</td>",
+							"        <td>{{response.created_at}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>ID</td>",
+							"        <td>{{response.id}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Description</td>",
+							"        <td>{{response.description}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Video Type</td>",
+							"        <td>{{response.media.video.type}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Duration (ms)</td>",
+							"        <td>{{response.media.video.duration_millis}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Video URL</td>",
+							"        <td>{{maxBitrateVariant.url}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>User ID</td>",
+							"        <td>{{response.user.id}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>User Name</td>",
+							"        <td>{{response.user.name}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Screen Name</td>",
+							"        <td>{{response.user.screen_name}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Followers Count</td>",
+							"        <td>{{response.user.followers_count}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Friends Count</td>",
+							"        <td>{{response.user.friends_count}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Listed Count</td>",
+							"        <td>{{response.user.listed_count}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Retweet Count</td>",
+							"        <td>{{response.retweet_count}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Favorite Count</td>",
+							"        <td>{{response.favorite_count}}</td>",
+							"    </tr>",
+							"    <tr>",
+							"        <td>Language</td>",
+							"        <td>{{response.lang}}</td>",
+							"    </tr>",
+							"</table>",
+							"`;",
+							"",
+							"function constructVisualizerPayload() {",
+							"    return { response: pm.response.json(), maxBitrateVariant: maxBitrateVariant };",
+							"}",
+							"",
+							"pm.visualizer.set(template, constructVisualizerPayload());",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-key",
+						"value": "{{x-rapidapi-key}}",
+						"type": "text"
+					},
+					{
+						"key": "x-rapidapi-host",
+						"value": "twitter-downloader-download-twitter-videos-gifs-and-images.p.rapidapi.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://twitter-downloader-download-twitter-videos-gifs-and-images.p.rapidapi.com/status?url=https://x.com/i/status/1824687560179818719",
+					"protocol": "https",
+					"host": [
+						"twitter-downloader-download-twitter-videos-gifs-and-images",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"status"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://x.com/i/status/1824687560179818719"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "InstaVideoCode",
+			"value": "CwqI-QTpUG2"
+		}
+	]
+}
